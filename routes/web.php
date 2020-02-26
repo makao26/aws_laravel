@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('json-test/', 'JsonTestController@index');
+Route::post('json-test/', 'JsonTestController@postJson');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
