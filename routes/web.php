@@ -23,3 +23,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('room/', 'RoomController@index')
   ->middleware('auth');
+Route::get('create', 'PostsController@add');
+Route::post('create', 'PostsController@create');
