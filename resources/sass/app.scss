@@ -6,3 +6,133 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// sassサンプル sacc ほぼ、css・・・・
+.banner{
+  position: relative;
+}
+
+.banner .banner-img {
+    width: 100vw;
+    height: 150px;
+}
+
+.banner .title-in-banner {
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  font-weight: bold; /*太字に*/
+  font-size: 5em;/*サイズ2倍*/
+  font-family :Quicksand, sans-serif;/*Google Font*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    margin: 0 ;
+    padding: 0 ;
+}
+
+nav ul li{
+  font-size: 1.2em;
+  list-style: none;
+  display: inline-block;
+  width: 20%; /* ここで項目の幅を指定します */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav li:hover{
+  border-bottom: 2px solid #800080; /* 下線の太さや色を指定します */
+}
+
+nav .nav {
+	display: flex;
+	justify-content: center;
+}
+
+main {
+	display: flex;
+	flex-flow: row;
+  margin-top: 16px;
+}
+.side1 {
+	flex: 0 0 200px;
+  margin-left:  16px;
+	margin-right: 16px;
+	border-radius: 6px;
+	padding: 20px;
+	background-color: #ddd;
+}
+
+.side1 .side-title{
+  font-size: 1.375rem;
+  padding: 0 8px 8px;
+  border-bottom: 2px #800080 solid;
+  font-weight: normal;
+}
+.page_main {
+	flex: 1 1 600px;
+  margin-right: 16px;
+	border-radius: 6px;
+	padding: 10px;
+	background-color: #ddd;
+}
+
+#content_main .article {
+    display: flex;
+    height: 250px;
+    margin: 10px;
+    /* padding: 10px;  */
+}
+
+#content_main .article figure img{
+	height: 100px;
+	width: 100px;
+	// margin: 0;
+  object-fit: cover;
+}
+
+.article-info {
+	display: inline-block;
+  width: 500px;
+  margin-left: 10px;
+}
+
+.article-info .article-title{
+	margin-top: 0px;
+	margin-bottom: 1.2rem;
+}
+
+#content_main .article-category {
+	background-color: #FFF687;
+	border-radius: 15px;
+	color: #000000;
+	padding: 5px 8px 5px 8px;
+}
+
+#content_main .article-date {
+	color: #8B8B8B;
+	margin-left: 1rem;
+}
+
+footer {
+  background: #000040;
+  text-align: center;
+  padding: 26px 0;
+  margin-top: 50px;
+}
+
+footer p {
+  color: #FFF;
+  font-size: 1em;
+}

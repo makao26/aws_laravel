@@ -25,3 +25,7 @@ Route::get('room/', 'RoomController@index')
   ->middleware('auth');
 Route::get('create', 'PostsController@add');
 Route::post('create', 'PostsController@create');
+
+//一般ユーザー閲覧画面
+//プロフィール
+Route::get('/profile', 'ProfileController@index');
