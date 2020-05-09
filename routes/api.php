@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+<<<<<<< .merge_file_wDCDEZ
 /*
 protected $routeMiddleware = [
   'jwt_auth'  =>  \Tymon\JWTAuth\Http\Middleware\Authenticate::class,
@@ -47,3 +48,5 @@ Route::post("/login",function(){
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+=======
+>>>>>>> .merge_file_wp0VDm
