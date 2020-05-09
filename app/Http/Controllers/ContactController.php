@@ -36,6 +36,7 @@ class ContactController extends Controller
     $contact = new Contact;
     //Log::debug($request->name);
     $this->saveContact($request,$contact);
-    return redirect('/contact');
+    //return redirect('/contact');
+    return view('contact.index');
   }
 }

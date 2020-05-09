@@ -174,12 +174,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-<<<<<<< HEAD
-        
-=======
-
-        //JWT Auth
->>>>>>> 91859fb0426d1645c8f559731870d243bb7a4391
     ],
 
     /*
