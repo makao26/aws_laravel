@@ -29,3 +29,6 @@ Route::post('create', 'PostsController@create');
 //一般ユーザー閲覧画面
 //プロフィール
 Route::get('/profile', 'ProfileController@index');
+//お問い合わせ
+Route::get('/contact', 'ContactController@index');
+Route::post('/contact', 'ContactController@postContact');
