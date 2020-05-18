@@ -4,7 +4,7 @@
 
 <div><h1>お問い合わせ</h1></div>
 <div>
-  <form action="/contact" method="post" name="form">
+  <form action="/aws_laravel/public/contact" method="post" name="form">
     @csrf
     <h1 class="contact-title">お問い合わせ 内容入力</h1>
     <p>お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>

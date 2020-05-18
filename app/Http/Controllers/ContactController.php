@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use App\Contact;
+use App\Models\Contact;
 use Storage;
 
 class ContactController extends Controller
@@ -37,6 +37,7 @@ class ContactController extends Controller
     //Log::debug($request->name);
     $this->saveContact($request,$contact);
     //return redirect('/contact');
+    Log::debug($contact->getContactCategory());
     return view('contact.index');
   }
 }

@@ -32,3 +32,7 @@ Route::get('/profile', 'ProfileController@index');
 //お問い合わせ
 Route::get('/contact', 'ContactController@index');
 Route::post('/contact', 'ContactController@postContact');
+
+//管理ユーザー画面
+Route::get('/admin/contact', 'admin\ContactController@index');
+Route::post('/admin/contact', 'admin\ContactController@searchContact');

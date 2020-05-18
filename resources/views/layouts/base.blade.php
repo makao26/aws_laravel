@@ -1,10 +1,12 @@
 <html>
+@section('head')
 <head>
   <meta charset="utf-8">
   <title>@yield('title')</title>
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <link rel="icon" type="image/png" href="{{ asset('/assets/favicon.png') }}">
 </head>
+@Show 
 <body>
   <header class="header">
     <div class="banner">
