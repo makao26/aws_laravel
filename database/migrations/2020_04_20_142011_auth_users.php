@@ -14,7 +14,7 @@ class AuthUsers extends Migration
     public function up()
     {
       Schema::table('users', function (Blueprint $table) {
-        $table->string('token')->unique()->nullable();
+        $table->string('api_token', 60)->unique();
       });
     }
 

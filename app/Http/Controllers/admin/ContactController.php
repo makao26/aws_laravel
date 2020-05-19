@@ -80,6 +80,7 @@ class ContactController extends Controller
         array_push($contacts,$contact_temp);
       }
     }
+    //return $contacts
     return view('admin.contact.index',['contacts'=>$contacts]);
   }
 
