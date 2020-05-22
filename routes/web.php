@@ -36,3 +36,4 @@ Route::post('/contact', 'ContactController@postContact');
 //管理ユーザー画面
 Route::get('/admin/contact', 'admin\ContactController@index');
 Route::post('/admin/contact', 'admin\ContactController@searchContact');
+Route::get('/admin/contact/detail', 'admin\ContactController@detail');

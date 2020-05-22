@@ -114,4 +114,12 @@ class ContactController extends Controller
     $request->Session()->put('inputparams',$inputparams);
     return redirect('admin/contact');
   }
+
+  public function detail(Request $request)
+  {
+    $contact = Contact::find($request->id);
+    Log::debug($request->id);
+    Log::debug($contact);
+    return view('admin.contact.detail',['contact' => $contact]);
+  }
 }

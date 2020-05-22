@@ -38,7 +38,7 @@
     <!-- お問い合わせ一覧表示部分 -->
     <div>
       <table>
-        <tr><th>ID</th><th>お名前</th><th>カテゴリー</th><th>作成日</th><th>更新日</th></tr>
+        <tr><th>ID</th><th>お名前</th><th>カテゴリー</th><th>作成日</th><th>更新日</th><th>詳細</th></tr>
         @if(isset($contacts))
         @foreach($contacts as $contact)
         <tr>
@@ -47,6 +47,7 @@
           <td>{{$contact->getContactCategory()}}</td>
           <td>{{$contact->created_at}}</td>
           <td>{{$contact->updated_at}}</td>
+          <td><a href='/aws_laravel/public/admin/contact/detail?id={{$contact->id}}'>詳細</td>
         </tr>
         @endforeach
         @endif
