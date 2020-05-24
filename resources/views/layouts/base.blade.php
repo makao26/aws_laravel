@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <link rel="icon" type="image/png" href="{{ asset('/assets/favicon.png') }}">
 </head>
-@Show 
+@Show
 <body>
   <header class="header">
     <div class="banner">
@@ -25,7 +25,7 @@
   <main>
     <aside class="side1">
       <h3 class="side-title">カテゴリー</h3>
-      <ul class="side-menu">
+      <ul class="side-menu" style="list-style: disc;">
         <li>ダミーリスト01</li>
         <li>ダミーリスト02</li>
         <li>ダミーリスト03</li>
