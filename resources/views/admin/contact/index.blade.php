@@ -10,7 +10,7 @@
 
 <!-- お問い合わせ検索部分 -->
 <div>
-  <form action="/aws_laravel/public/admin/contact" method="post">
+  <form action="/admin/contact" method="post">
     @csrf
     名前・ニックネーム：
     <input type="text" name="name">
