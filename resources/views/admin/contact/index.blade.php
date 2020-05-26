@@ -1,11 +1,8 @@
 @extends('layouts.base')
 @section('title','お問い合わせ一覧')
 @section('content')
-
-<!-- お問い合わせ検索部分 -->
-
     <div>
-      <form action="/aws_laravel/public/admin/contact" method="post">
+      <form action="/admin/contact" method="post">
         @csrf
         <!-- ID：
         <input type="text" name="id"> -->
