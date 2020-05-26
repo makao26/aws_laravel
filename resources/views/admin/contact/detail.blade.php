@@ -18,4 +18,12 @@
     </tbody>
   </table>
 </div>
+<div class="mail-form">
+  <form action="/admin/contact/detail" method="post">
+    @csrf
+    本文: <br>
+    <textarea name="return_text" rows="5" placeholder="お問合せの返答を入力"></textarea>
+    <input type="submit">
+  </form>
+</div>
 @endsection

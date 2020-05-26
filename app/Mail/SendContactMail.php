@@ -35,10 +35,10 @@ class SendContactMail extends Mailable
     public function build()
     {
       $data = [
-        'user' => $this->user,
+        'name' => $this->name,
         'text' => $this->text,
       ];
-      return $this->view('admin.contact.contact_mail')
+      return $this->view('admin.contact.mail')
                 ->from('makao26work@gmail.com')
                 ->subject($this->title)
                 ->with($data);

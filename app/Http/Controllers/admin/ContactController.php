@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Contact;
 use App\Models\ContactCategory;
 use Illuminate\Support\Facades\Log;
+use Mail;
+use App\Mail\SendContactMail;
 
 class ContactController extends Controller
 {
@@ -108,7 +110,8 @@ class ContactController extends Controller
 
   public function searchContact(Request $request)
   {
-    $inputparams = $request->session()->get('inputparams');
+    //$inputparams = $request->session()->get('inputparams');
+    $inputparams = $this->getSearchContactParam();
     //Log::debug($inputparams);
     //セッションでフォームのインプットデータを受け渡している
     $request->Session()->put('inputparams',$inputparams);
@@ -118,8 +121,23 @@ class ContactController extends Controller
   public function detail(Request $request)
   {
     $contact = Contact::find($request->id);
-    Log::debug($request->id);
-    Log::debug($contact);
+    // Log::debug($request->id);
+    // Log::debug($contact);
+    $request->Session()->put('contact',$contact);
     return view('admin.contact.detail',['contact' => $contact]);
+  }
+
+  public function postMail(Request $request)
+  {
+    $contact = $request->session()->get('contact');
+    $return_text = $request->return_text;
+    $to = [
+	    [
+        'email' => $contact->mail,
+        'name' => $contact->name,
+	    ]
+    ];
+    Mail::to($to)->send(new SendContactMail($contact->title,$contact->name,$return_text));
+    return redirect('admin/contact');
   }
 }
