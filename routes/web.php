@@ -38,3 +38,7 @@ Route::get('/admin/contact', 'admin\ContactController@index');
 Route::post('/admin/contact', 'admin\ContactController@searchContact');
 Route::get('/admin/contact/detail', 'admin\ContactController@detail');
 Route::post('/admin/contact/detail', 'admin\ContactController@postMail');
+Route::get('/admin/article', 'admin\ArticleController@index');
+Route::post('/admin/article', 'admin\ArticleController@searchArticle');
+Route::get('/admin/article/add', 'admin\ArticleController@add');
+Route::post('/admin/article/add', 'admin\ArticleController@create');
