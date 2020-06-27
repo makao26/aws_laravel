@@ -34,11 +34,19 @@ Route::get('/contact', 'ContactController@index');
 Route::post('/contact', 'ContactController@postContact');
 
 //管理ユーザー画面
-Route::get('/admin/contact', 'admin\ContactController@index');
-Route::post('/admin/contact', 'admin\ContactController@searchContact');
-Route::get('/admin/contact/detail', 'admin\ContactController@detail');
-Route::post('/admin/contact/detail', 'admin\ContactController@postMail');
-Route::get('/admin/article', 'admin\ArticleController@index');
-Route::post('/admin/article', 'admin\ArticleController@searchArticle');
-Route::get('/admin/article/add', 'admin\ArticleController@add');
-Route::post('/admin/article/add', 'admin\ArticleController@create');
+Route::get('/admin/contact', 'admin\ContactController@index')
+  ->middleware('auth');
+Route::post('/admin/contact', 'admin\ContactController@searchContact')
+  ->middleware('auth');
+Route::get('/admin/contact/detail', 'admin\ContactController@detail')
+  ->middleware('auth');
+Route::post('/admin/contact/detail', 'admin\ContactController@postMail')
+  ->middleware('auth');
+Route::get('/admin/article', 'admin\ArticleController@index')
+  ->middleware('auth');
+Route::post('/admin/article', 'admin\ArticleController@searchArticle')
+  ->middleware('auth');
+Route::get('/admin/article/add', 'admin\ArticleController@add')
+  ->middleware('auth');
+Route::post('/admin/article/add', 'admin\ArticleController@create')
+  ->middleware('auth');

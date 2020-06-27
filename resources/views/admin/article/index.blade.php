@@ -41,7 +41,7 @@
       <td>{{$article->text}}</td>
       <td>{{$article->created_at}}</td>
       <td>{{$article->updated_at}}</td>
-      td><a href='/aws_laravel/public/admin/article/detail?id={{$article->id}}'>詳細</td>
+      <td><a href='/aws_laravel/public/admin/article/detail?id={{$article->id}}'>詳細</td>
     </tr>
     @endforeach
     @endif

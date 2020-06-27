@@ -4565,6 +4565,7 @@ input[type=button].btn-block {
 .navbar-nav .nav-link {
   padding-right: 0;
   padding-left: 0;
+  padding
 }
 
 .navbar-nav .dropdown-menu {
@@ -11021,4 +11022,3 @@ footer p {
   color: #FFF;
   font-size: 1em;
 }
-
