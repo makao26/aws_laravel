@@ -4565,7 +4565,6 @@ input[type=button].btn-block {
 .navbar-nav .nav-link {
   padding-right: 0;
   padding-left: 0;
-  padding
 }
 
 .navbar-nav .dropdown-menu {
@@ -10979,19 +10978,32 @@ main {
   height: 250px;
   margin: 10px;
   /* padding: 10px;  */
+  background-color: silver;
+}
+
+#content_main .article figure {
+  float: left;
+  height: 250px;
+  width: 250px;
+  margin: 0;
+  background-color: red;
 }
 
 #content_main .article figure img {
-  height: 100px;
-  width: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  border-radius: 5px;
+  height: 250px;
+  width: 250px;
 }
 
 .article-info {
   display: inline-block;
   width: 500px;
-  margin-left: 10px;
+  float: right;
+}
+
+.article-info h1 {
+  margin-top: 0px;
+  margin-bottom: 1.2rem;
 }
 
 .article-info .article-title {
@@ -11011,6 +11023,10 @@ main {
   margin-left: 1rem;
 }
 
+.article-info p {
+  color: #8B8B8B;
+}
+
 footer {
   background: #000040;
   text-align: center;
@@ -11022,3 +11038,4 @@ footer p {
   color: #FFF;
   font-size: 1em;
 }
+
