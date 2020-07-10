@@ -44,7 +44,7 @@
           <td>{{$contact->getContactCategory()}}</td>
           <td>{{$contact->created_at}}</td>
           <td>{{$contact->updated_at}}</td>
-          <td><a href='/aws_laravel/public/admin/contact/detail?id={{$contact->id}}'>詳細</td>
+          <td><a href='/admin/contact/detail?id={{$contact->id}}'>詳細</td>
         </tr>
         @endforeach
         @endif

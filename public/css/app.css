@@ -10986,13 +10986,14 @@ main {
   height: 250px;
   width: 250px;
   margin: 0;
-  background-color: red;
 }
 
 #content_main .article figure img {
   border-radius: 5px;
   height: 250px;
   width: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .article-info {

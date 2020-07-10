@@ -3,7 +3,7 @@
 @section('content')
 
 <div>
-  <form action="/laravelapp/public/admin/article" method="post">
+  <form action="/admin/article" method="post">
     @csrf
     ID：
     <input type="text" name="id">
@@ -41,7 +41,7 @@
       <td>{{$article->text}}</td>
       <td>{{$article->created_at}}</td>
       <td>{{$article->updated_at}}</td>
-      <td><a href='/aws_laravel/public/admin/article/detail?id={{$article->id}}'>詳細</td>
+      <td><a href='/admin/article/detail?id={{$article->id}}'>詳細</td>
     </tr>
     @endforeach
     @endif

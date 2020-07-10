@@ -34,6 +34,7 @@ Route::get('/contact', 'ContactController@index');
 Route::post('/contact', 'ContactController@postContact');
 //ブログ記事
 Route::get('/article', 'ArticleController@index');
+Route::get('/article/detail', 'ArticleController@detail');
 
 //管理ユーザー画面
 Route::get('/admin/contact', 'admin\ContactController@index')

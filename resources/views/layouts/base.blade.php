@@ -17,20 +17,17 @@
   </header>
   <nav>
     <ul class="nav">
-      <li><a href="https://www.google.com">ダミーリンク01(google)</a></li>
-      <li><a href="https://www.yahoo.co.jp">ダミーリンク02(yahoo japan)</a></li>
-      <li><a href="https://www.apple.com/jp/">ダミーリンク03(apple)</a></li>
+      <li><a href= "/public/profile">プロフィール</a></li>
+      <li><a href= "/article">記事一覧</a></li>
+      <li><a href= "/contact">お問い合わせ</a></li>
     </ul>
   </nav>
   <main>
     <aside class="side1">
       <h3 class="side-title">カテゴリー</h3>
-      <ul class="side-menu" style="list-style: disc;">
-        <li>ダミーリスト01</li>
-        <li>ダミーリスト02</li>
-        <li>ダミーリスト03</li>
-        <li>ダミーリスト04</li>
-      </ul>
+      <div class="side-contents">
+        @yield('side-contents')
+      <div>
     </aside>
     <section class="page_main">
       <div id="content_main">

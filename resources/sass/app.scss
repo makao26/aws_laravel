@@ -101,7 +101,7 @@ main {
 	height: 250px;
 	width: 250px;
 	margin: 0;
-  background-color: red;
+  // background-color: red;
 }
 
 #content_main .article figure img{
@@ -111,7 +111,7 @@ main {
 	// height: 100px;
 	// width: 100px;
 	// margin: 0;
-  //object-fit: cover;
+  object-fit: cover;
 }
 
 .article-info {

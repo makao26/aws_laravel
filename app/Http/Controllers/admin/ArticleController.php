@@ -10,6 +10,7 @@ use Storage;
 
 class ArticleController extends Controller
 {
+
   private function getSearchArticleParam(Request $request)
   {
     $inputparams = [
@@ -37,12 +38,12 @@ class ArticleController extends Controller
     $image = $request->file('image');
 
     // バケットの`myprefix`フォルダへアップロード
-    $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');//S3へアップロード
-    // アップロードした画像のフルパスを取得
-    $image_path = Storage::disk('s3')->url($path);//S3のファイルパス
-    
-    // $path = Storage::disk('local')->putFile('/article_img', $image, 'public');
-    // $image_path = Storage::disk('local')->url($path);//ローカルのファイルパス
+    // $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');//S3へアップロード
+    // // アップロードした画像のフルパスを取得
+    // $image_path = Storage::disk('s3')->url($path);//S3のファイルパス
+    //
+    $path = Storage::disk('public')->putFile('/article_img', $image, 'public');
+    $image_path = Storage::disk('public')->url($path);//ローカルのファイルパス
     return $image_path;
   }
 
@@ -91,7 +92,7 @@ class ArticleController extends Controller
 
   public function searcharticle(Request $request)
   {
-    $inputparams = $this->getSearchArticleParam();
+    $inputparams = $this->getSearchArticleParam($request);
     //Log::debug($inputparams);
     //セッションでフォームのインプットデータを受け渡している
     $request->Session()->put('inputparams',$inputparams);
