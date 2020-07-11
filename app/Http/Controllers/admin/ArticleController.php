@@ -37,13 +37,13 @@ class ArticleController extends Controller
   private function postImage(Request $request){
     $image = $request->file('image');
 
-    // バケットの`myprefix`フォルダへアップロード
-    // $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');//S3へアップロード
-    // // アップロードした画像のフルパスを取得
-    // $image_path = Storage::disk('s3')->url($path);//S3のファイルパス
-    //
-    $path = Storage::disk('public')->putFile('/article_img', $image, 'public');
-    $image_path = Storage::disk('public')->url($path);//ローカルのファイルパス
+    バケットの`myprefix`フォルダへアップロード
+    $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');//S3へアップロード
+    // アップロードした画像のフルパスを取得
+    $image_path = Storage::disk('s3')->url($path);//S3のファイルパス
+    
+    // $path = Storage::disk('public')->putFile('/article_img', $image, 'public');
+    // $image_path = Storage::disk('public')->url($path);//ローカルのファイルパス
     return $image_path;
   }
 
