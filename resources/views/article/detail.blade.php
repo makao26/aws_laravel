@@ -1,10 +1,15 @@
 @extends('layouts.base')
+
+@section('side-title','人気記事')
 @section('side-contents')
 <ul class="side-menu" style="list-style: disc;">
-  <li>ダミーリスト01</li>
-  <li>ダミーリスト02</li>
-  <li>ダミーリスト03</li>
-  <li>ダミーリスト04</li>
+  @foreach($populer_articles as $populer_article)
+  <li>
+    <a href= "/article/detail?id={{$populer_article->id}}" >
+      {{$populer_article->title}}
+    </a>
+  </li>
+  @endforeach
 </ul>
 @endsection
 @section('title','記事詳細')

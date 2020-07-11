@@ -1,4 +1,5 @@
 @extends('layouts.base')
+@section('side-title','記事カテゴリー')
 @section('side-contents')
 <ul class="side-menu" style="list-style: disc;">
   @foreach($category_list as $category)

@@ -24,7 +24,7 @@
   </nav>
   <main>
     <aside class="side1">
-      <h3 class="side-title">カテゴリー</h3>
+      <h3 class="side-title">@yield('side-title')</h3>
       <div class="side-contents">
         @yield('side-contents')
       <div>

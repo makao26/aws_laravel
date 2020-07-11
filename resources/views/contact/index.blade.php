@@ -1,4 +1,11 @@
 @extends('layouts.base')
+@section('side-title','Twitter')
+@section('side-contents')
+<a class="twitter-timeline" href="https://twitter.com/makao26?ref_src=twsrc%5Etfw">
+  Tweets by makao26
+</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+@endsection
 @section('title','お問い合わせ')
 @section('content')
 

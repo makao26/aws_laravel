@@ -10,7 +10,7 @@ class ProfileController extends Controller
 {
   public function index(Request $request){
     Log::debug('start');
-    $url = request()->fullUrl();
+    $url = request()->fullUrl(); //getパラメータ含めて取得
     Log::debug('url'.$url);
     Utility::accessCounter($url);
     Log::debug('end');

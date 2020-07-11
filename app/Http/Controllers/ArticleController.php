@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use App\Models\Article;
 use Storage;
+use App\Utility\Utility;
 
 
 class ArticleController extends Controller
@@ -62,8 +63,21 @@ class ArticleController extends Controller
 
   public function detail(Request $request)
   {
-    $article = Article::find($request->id);
-    return view('article.detail',['article' => $article]);
+    $url = request()->fullUrl(); //getパラメータ含めて取得
+    Utility::accessCounter($url);//アクセス数カウント
+    $populer_article_ids = Utility::getPopulerArticles();
+    Log::debug($populer_article_ids);
+    $article = Article::find($request->id);//記事詳細用データ
+    $populer_articles = [];
+    //ランキング順に表示したいため、whereInをあえて使っていない
+    foreach ($populer_article_ids as $key => $populer_article_id) {
+      $populer_article = Article::find($populer_article_id);
+      Log::debug($populer_article);
+      if(!empty($populer_article)){
+        array_push($populer_articles,$populer_article);
+      }
+    }
+    return view('article.detail',['article' => $article,'populer_articles'=> $populer_articles]);
   }
 
 
