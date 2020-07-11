@@ -44,7 +44,7 @@
       </div>
       <div>
         <label>お問い合わせ内容<span>(必須)</span></label>
-        <textarea name="contact_text" rows="5" placeholder="お問合せ内容を入力"></textarea>
+        <textarea class="contact-text" name="contact_text" rows="5" placeholder="お問合せ内容を入力"></textarea>
         @error('contact_text')
         <p>{{$message}}</p>
         @enderror

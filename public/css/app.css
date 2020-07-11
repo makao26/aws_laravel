@@ -10973,6 +10973,10 @@ main {
   background-color: #ddd;
 }
 
+.contact-text {
+  width: 300px;
+}
+
 #content_main .article {
   display: flex;
   height: 250px;
