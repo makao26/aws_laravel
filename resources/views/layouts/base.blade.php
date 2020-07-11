@@ -17,7 +17,7 @@
   </header>
   <nav>
     <ul class="nav">
-      <li><a href= "/public/profile">プロフィール</a></li>
+      <li><a href= "/profile">プロフィール</a></li>
       <li><a href= "/article">記事一覧</a></li>
       <li><a href= "/contact">お問い合わせ</a></li>
     </ul>
