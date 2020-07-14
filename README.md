@@ -19,7 +19,7 @@ PHP+Laraveで作成したAWS上で動作しているWEBアプリケーション�
 ログインしたユーザーはお問い合わせに対して、入力フォームより返答を入力することで、返答メールを送信することができる。
 
 ## 環境
-インフラ：AWS EC2、AWS RDS、AWS S3 
+インフラ：AWS EC2、AWS RDS、AWS S3 <br>
 OS：Linux <br>
 DB：MySQL <br>
 バックエンド言語：PHP <br>
