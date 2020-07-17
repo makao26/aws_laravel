@@ -50,7 +50,6 @@
         @enderror
       </div>
     </div>
-    <button type="submit">送信</button>
     <input type="submit" value="送信">
     <input type="button" onclick="dialog()" value="本文入力内容">
   </form>

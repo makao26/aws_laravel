@@ -8,13 +8,38 @@
 @endsection
 @section('title','自己紹介')
 @section('content')
+<style>
+div #section a  {
+    cursor:pointer;
+}
+.section{
+  height:320px;
+  border:1px solid #ff6a00;
+}
+</style>
+<script type="text/javascript">
+  function ScrollWindow(elem) {
+    var element = document.getElementById(elem);
+    var rect = element.getBoundingClientRect();
+    var elemtop = rect.top + window.pageYOffset;
+    console.log(elemtop);
+    element.scrollTop = elemtop;
+  }
+</script>
+
 <div class="base-profile">
-  <h1>Who am I !?</h1>
+  <div id="section" class="section">
+    目次<br/>
+    <a id="link_who_am_i" href="javascript:void(0);" onclick="ScrollWindow('who_am_i');">Who am I</a><br/>
+    <a id="link_coment" href="javascript:void(0);" onclick="ScrollWindow('coment');">コメント</a><br/>
+    <a id="link_career" href="javascript:void(0);" onclick="ScrollWindow('gz');">職務経歴 gz</a><br/>
+  </div>
+  <h1 id="who_am_i">Who am I !?</h1>
   <p>
     名前: makao26<br>
     Twitter:@makao26
   </p>
-  <h2>コメント</h2>
+  <h2 id="coment">コメント</h2>
   <p>関西に出没するITエンジニアです。楽しく開発がモットーです。</p>
   <h2>基本データ</h2>
   <p>
@@ -26,7 +51,7 @@
     特技: 幅広いIT技術を薄らキャッチアップすること<br>
   </p>
   <hr>
-  <h2>職務経歴</h2>
+  <h2 id="career" >職務経歴</h2>
   <div id="Company01">
     <h3>社会インフラ系SIer</h3>
     <p>
@@ -83,7 +108,7 @@
   </div>
   <hr>
   <div id="Company02">
-    <h3>スマホ、PC向けゲーム会社</h3>
+    <h3 id="gz">スマホ、PC向けゲーム会社</h3>
     <p>
       1: 教育機関向け、オンライン学習システム開発<br>
       担当フェーズ: プログラミング、単体テスト<br>
@@ -126,4 +151,6 @@
     </p>
   </div>
 </div>
+
+
 @endsection
