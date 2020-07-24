@@ -37,7 +37,9 @@ Route::get('/article', 'ArticleController@index');
 Route::get('/article/detail', 'ArticleController@detail');
 //課金用画面
 Route::get('/stripe', 'StripeController@index');
-Route::post('/stripe', 'StripeController@singleStripe');
+Route::post('/stripe', 'StripeController@postPayNum');
+Route::get('/stripe/confirm', 'StripeController@confirm');
+Route::post('/stripe/confirm', 'StripeController@singleStripe');
 
 
 //管理ユーザー画面
