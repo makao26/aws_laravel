@@ -8,7 +8,7 @@
 @endsection
 @section('title','課金決定画面')
 @section('content')
-<form action="/aws_laravel/public/stripe/confirm" method="POST">
+<form action="/stripe/confirm" method="POST">
   @csrf
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"

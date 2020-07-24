@@ -49,6 +49,7 @@ class StripeController extends Controller
         ));
         Log::debug('デバッグメッセージ03-01');
         Log::debug($request);
+        session()->flash('flash_message', '投げ銭ありがとうございます!');
     } catch(\Stripe\Error\Card $e) {
       // The card has been declined
       Log::debug('デバッグメッセージ03-02');

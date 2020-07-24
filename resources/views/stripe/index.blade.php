@@ -8,7 +8,14 @@
 @endsection
 @section('title','課金額入力画面')
 @section('content')
-<form action="/aws_laravel/public/stripe" method="POST">
+<!-- フラッシュメッセージ -->
+@if (session('flash_message'))
+<div class="flash_message">
+  {{ session('flash_message') }}
+</div>
+@endif
+
+<form action="/stripe" method="POST">
   @csrf
   <input type="number" min="0" max="255" name="pay_num" value="{{ old('pay_num') }}">
   <input type="submit" value="投げ銭金額決定">
