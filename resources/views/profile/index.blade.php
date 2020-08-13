@@ -17,15 +17,6 @@ div #section a  {
   border:1px solid #ff6a00;
 }
 </style>
-<script type="text/javascript">
-  function ScrollWindow(elem) {
-    var element = document.getElementById(elem);
-    var rect = element.getBoundingClientRect();
-    var elemtop = rect.top + window.pageYOffset;
-    console.log(elemtop);
-    element.scrollTop = elemtop;
-  }
-</script>
 
 <div class="base-profile">
   <div id="section" class="section">
