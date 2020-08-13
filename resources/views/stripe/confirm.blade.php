@@ -6,7 +6,7 @@
 </a>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 @endsection
-@section('title','課金決定画面')
+@section('title','投げ銭決定画面')
 @section('content')
 <form action="/stripe/confirm" method="POST">
   @csrf

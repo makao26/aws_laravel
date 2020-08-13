@@ -10911,16 +10911,16 @@ a.text-dark:focus {
   padding: 0;
 }
 
-nav {
+#my-site-nav {
   text-align: center;
 }
 
-nav ul {
+#my-site-nav ul {
   margin: 0;
   padding: 0;
 }
 
-nav ul li {
+#my-site-nav ul li {
   font-size: 1.2em;
   list-style: none;
   display: inline-block;
@@ -10928,17 +10928,17 @@ nav ul li {
   /* ここで項目の幅を指定します */
 }
 
-nav ul li a {
+#my-site-nav ul li a {
   text-decoration: none;
   color: #333;
 }
 
-nav li:hover {
+#my-site-nav li:hover {
   border-bottom: 2px solid #800080;
   /* 下線の太さや色を指定します */
 }
 
-nav .nav {
+#my-site-nav .nav {
   display: flex;
   justify-content: center;
 }

@@ -20,9 +20,11 @@ Route::post('json-test/', 'JsonTestController@postJson');
 
 Auth::routes();
 
+//homeはサブスク確認用で使用 7/25(土)
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('room/', 'RoomController@index')
-  ->middleware('auth');
+Route::post('/subscribe_process', 'HomeController@subscribe_process');
+// Route::get('room/', 'RoomController@index')
+//   ->middleware('auth');
 Route::get('create', 'PostsController@add');
 Route::post('create', 'PostsController@create');
 

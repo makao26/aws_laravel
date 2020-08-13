@@ -17,7 +17,7 @@
 
 <form action="/stripe" method="POST">
   @csrf
-  <input type="number" min="0" max="255" name="pay_num" value="{{ old('pay_num') }}">
+  <input type="number" min="1" max="10000" name="pay_num" value="{{ old('pay_num') }}">
   <input type="submit" value="投げ銭金額決定">
 </form>
 @endsection

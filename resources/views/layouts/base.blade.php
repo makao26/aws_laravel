@@ -15,8 +15,8 @@
     </div>
 
   </header>
-  <nav>
-    <ul class="nav">
+  <nav id="my-site-nav">
+    <ul class="nav" id="my-site-ul">
       <li><a href= "/profile">プロフィール</a></li>
       <li><a href= "/article">記事一覧</a></li>
       <li><a href= "/contact">お問い合わせ</a></li>

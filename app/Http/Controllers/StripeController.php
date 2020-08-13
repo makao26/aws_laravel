@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
 /*
+composer require "stripe/stripe-php"
 */
 class StripeController extends Controller
 {
