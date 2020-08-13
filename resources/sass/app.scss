@@ -151,6 +151,18 @@ main {
 	color: #8B8B8B;
 }
 
+.wrapper-grid {
+  display: grid;
+  gap: 26px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+.wrapper-grid .tile-item .tile-figure img{
+  object-fit: cover;
+}
+
 footer {
   background: #000040;
   text-align: center;
