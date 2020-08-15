@@ -11,55 +11,55 @@
 <div class="wrapper-grid">
     <div class="tile-item">
         <figure class="tile-figure">
-            <img src="{{ asset('/assets/test01.png') }}">
+            <img src="{{ asset('/assets/test01.jpg') }}">
         </figure>
         <p>写真キャプション写真キャプション01</p>
     </div>
     <div class="tile-item">
         <figure class="tile-figure">
-            <img src="{{ asset('/assets/test01.png') }}">
+            <img src="{{ asset('/assets/test01.jpg') }}">
         </figure>
         <p>写真キャプション写真キャプション02</p>
     </div>
     <div class="tile-item">
         <figure class="tile-figure">
-            <img src="{{ asset('/assets/test01.png') }}">
+            <img src="{{ asset('/assets/test01.jpg') }}">
         </figure>
         <p>写真キャプション写真キャプション03</p>
     </div>
     <div class="tile-item">
         <figure class="tile-figure">
-            <img src="{{ asset('/assets/test01.png') }}">
+            <img src="{{ asset('/assets/test01.jpg') }}">
         </figure>
         <p>写真キャプション写真キャプション04</p>
     </div>
     <div class="tile-item">
         <figure class="tile-figure">
-            <img src="{{ asset('/assets/test01.png') }}">
+            <img src="{{ asset('/assets/test01.jpg') }}">
         </figure>
         <p>写真キャプション写真キャプション05</p>
     </div>
     <div class="tile-item">
         <figure class="tile-figure">
-            <img src="{{ asset('/assets/test01.png') }}">
+            <img src="{{ asset('/assets/test01.jpg') }}">
         </figure>
         <p>写真キャプション写真キャプション06</p>
     </div>
-    <<div class="tile-item">
+    <div class="tile-item">
         <figure class="tile-figure">
-            <img src="{{ asset('/assets/test01.png') }}">
+            <img src="{{ asset('/assets/test01.jpg') }}">
         </figure>
         <p>写真キャプション写真キャプション07</p>
     </div>
     <div class="tile-item">
         <figure class="tile-figure">
-            <img src="{{ asset('/assets/test01.png') }}">
+            <img src="{{ asset('/assets/test01.jpg') }}">
         </figure>
         <p>写真キャプション写真キャプション08</p>
     </div>
     <div class="tile-item">
         <figure class="tile-figure">
-            <img src="{{ asset('/assets/test01.png') }}">
+            <img src="{{ asset('/assets/test01.jpg') }}">
         </figure>
         <p>写真キャプション写真キャプション09</p>
     </div>
