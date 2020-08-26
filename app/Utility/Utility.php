@@ -61,6 +61,4 @@ class Utility
     Log::debug($article_ids);
     return $article_ids;
   }
-
-
 }
