@@ -63,3 +63,5 @@ Route::post('/admin/article/add', 'admin\ArticleController@create')
   ->middleware('auth');
 Route::get('/admin/clothes-cross', 'admin\ClothesCrossController@index')
   ->middleware('auth');
+  Route::get('/admin/recommend', 'admin\RecommendController@index')
+  ->middleware('auth');
