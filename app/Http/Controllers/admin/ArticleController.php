@@ -5,8 +5,10 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
 use App\Models\Article;
-use Storage;
+// use Storage;
+
 
 class ArticleController extends Controller
 {
@@ -48,8 +50,8 @@ class ArticleController extends Controller
   }
 
   private function saveArticle(Request $request , Article $article){
-    $form = $request->all();
-    unset($form['_token']);
+    // $form = $request->all();
+    // unset($form['_token']);
     $article->title = $request->title;
     $article->text = $request->text;
     $article->category = $request->category;
@@ -99,14 +101,43 @@ class ArticleController extends Controller
     return redirect('admin/article');
   }
 
-  //新規記事投稿
-  public function add(Request $request){
+  //記事投稿
+  public function add(Request $request)
+  {
     return view('admin.article.add');
   }
-  public function create(Request $request){
+  public function create(Request $request)
+  {
     $this->articleValidate($request);
     $article = new Article;
     $this->saveArticle($request,$article);
     return redirect('/admin/article/add');
   }
+
+  //記事編集
+  public function edit(Request $request)
+  {
+    $article = Article::find($request->id);
+    return view('admin.article.edit',['article' => $article]);
+  }
+  public function update(Request $request)
+  {
+    $this->articleValidate($request);
+    $article = Article::find($request->id);
+    $this->saveArticle($request,$article);
+    return redirect('/admin/article/edit');
+  }
+
+  //記事削除
+  public function delete(Request $request)
+  {
+    $article = Article::find($request->id);
+    return view('admin.article.delete',['article' => $article]);
+  }
+  public function remove(Request $request)
+  {
+    $article = Article::find($request->id)->delete();
+    return redirect('admin/article');
+  }
+
 }

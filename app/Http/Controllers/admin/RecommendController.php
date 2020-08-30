@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Evaluation;
 
 class RecommendController extends Controller
@@ -12,6 +13,10 @@ class RecommendController extends Controller
 
     public function index()
     {
+        //ログイン中のユーザーID取得
+        $id = Auth::user()->id;
+        Log::debug($id);
+        
         //全件取得
         $evaluations = Evaluation::get();
         //重複なしのユーザを取得
@@ -21,7 +26,7 @@ class RecommendController extends Controller
         $dataset = $this->repackdata($evaluations,$user_ids);
         // Log::debug($dataset);
         //オススメアイテム取得
-        $recommend_info = $this->get_recommend(7,2,$dataset);
+        $recommend_info = $this->get_recommend(7,2,$dataset);//暫定　引数
         Log::debug($recommend_info);
         return view('admin.recommend.index');
     }
