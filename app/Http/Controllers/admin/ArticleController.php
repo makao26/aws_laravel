@@ -123,6 +123,7 @@ class ArticleController extends Controller
   public function update(Request $request)
   {
     $this->articleValidate($request);
+    //idをパラメータとして受け取るようにする
     $article = Article::find($request->id);
     $this->saveArticle($request,$article);
     return redirect('/admin/article/edit');

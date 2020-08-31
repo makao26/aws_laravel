@@ -2,7 +2,7 @@
 @section('title','記事編集')
 @section('content')
   <div>
-    <form action="/admin/article/edit" method="post" enctype="multipart/form-data">
+    <form action="/aws_laravel/public/admin/article/edit" method="post" enctype="multipart/form-data">
       <!-- アップロードフォームの作成 -->
       @csrf
       <br>
