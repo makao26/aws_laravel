@@ -38,14 +38,19 @@ class ArticleController extends Controller
 
   private function postImage(Request $request){
     $image = $request->file('image');
-
-    // バケットの`myprefix`フォルダへアップロード
-    $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');//S3へアップロード
-    // アップロードした画像のフルパスを取得
-    $image_path = Storage::disk('s3')->url($path);//S3のファイルパス
-    
-    // $path = Storage::disk('public')->putFile('/article_img', $image, 'public');
-    // $image_path = Storage::disk('public')->url($path);//ローカルのファイルパス
+    if(!is_null($image)){
+      // バケットの`myprefix`フォルダへアップロード
+      // $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');//S3へアップロード
+      // アップロードした画像のフルパスを取得
+      // $image_path = Storage::disk('s3')->url($path);//S3のファイルパス
+      
+      $path = Storage::disk('public')->putFile('/article_img', $image, 'public');
+      $image_path = Storage::disk('public')->url($path);//ローカルのファイルパス
+    }else{
+      $image_path = Article::find($request->id)->image_path;
+      Log::debug('$image_path');
+      Log::debug($image_path);
+    }
     return $image_path;
   }
 
@@ -125,8 +130,9 @@ class ArticleController extends Controller
     $this->articleValidate($request);
     //idをパラメータとして受け取るようにする
     $article = Article::find($request->id);
+    Log::debug($request->id);
     $this->saveArticle($request,$article);
-    return redirect('/admin/article/edit');
+    return redirect('/admin/article/edit?id='.$request->id);
   }
 
   //記事削除
