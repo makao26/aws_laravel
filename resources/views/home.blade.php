@@ -3,18 +3,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    
-                </div>
+            <div id="home-menu">
+                <ul>
+                <li><a href="#">TOP</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">DIARY</a></li>
+                <li><a href="#">BBS</a></li>
+                </ul> 
             </div>
         </div>
     </div>

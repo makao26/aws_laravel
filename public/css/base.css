@@ -1,6 +1,43 @@
 body {
-  background-image: url("/img/login.jpg");
+  background: linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8)) fixed, url(http://www.webcreatorbox.com/sample/images/bg-cherrybrossam.jpg) fixed;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  
 }
+
+#home-menu ul{ 
+  margin: 0; 
+  padding: 0; 
+  list-style-type: none; 
+}
+  
+#home-menu li{ 
+  display: inline; 
+  padding: 0; 
+  margin: 0; 
+}
+#home-menu li a{
+  display: block; 
+  border-left: 8px solid #474655;
+  border-top: 1px solid #474655;
+  border-right: 1px solid #474655;
+  border-bottom: 1px solid #474655;
+  background-color: #fff;
+  padding: 3px 10px;
+  text-decoration: none;
+  color: #333;
+  width: 150px; 
+  margin: 1px 0px;
+  text-align: left;
+  font-size: 14px;
+}
+#home-menu li a:hover{
+  border-left: 8px solid #474655;
+  border-top: 1px solid #474655;
+  border-right: 1px solid #474655;
+  border-bottom: 1px solid #474655;
+  background-color: #d7efd7;
+}
+
+
