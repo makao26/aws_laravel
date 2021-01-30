@@ -13,8 +13,9 @@ class ClothesCrossController extends Controller
     //レビュー投稿機能
     public function add(Request $request){
         return view('admin.clothes-cross.add');
-      }
-      public function create(Request $request){
+    }
+    public function create(Request $request){
+        
         return redirect('/admin/clothes-cross/add');
-      }
+    }
 }

@@ -15,16 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('json-test/', 'JsonTestController@index');
-Route::post('json-test/', 'JsonTestController@postJson');
-
 Auth::routes();
 
 //homeはサブスク確認用で使用 7/25(土)
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/subscribe_process', 'HomeController@subscribe_process');
-// Route::get('room/', 'RoomController@index')
-//   ->middleware('auth');
+
 Route::get('create', 'PostsController@add');
 Route::post('create', 'PostsController@create');
 
@@ -42,6 +37,7 @@ Route::get('/stripe', 'StripeController@index');
 Route::post('/stripe', 'StripeController@postPayNum');
 Route::get('/stripe/confirm', 'StripeController@confirm');
 Route::post('/stripe/confirm', 'StripeController@singleStripe');
+
 
 
 //管理ユーザー画面
