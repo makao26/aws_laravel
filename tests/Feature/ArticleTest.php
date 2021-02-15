@@ -13,9 +13,9 @@ class ArticleTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testArticleList()
     {
-        $response = $this->get('/');
+        $response = $this->get('/article');
 
         $response->assertStatus(200);
     }
