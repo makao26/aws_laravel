@@ -13,10 +13,10 @@ class ArticleTest extends TestCase
      *
      * @return void
      */
-    public function testArticleList()
-    {
-        $response = $this->get('/article');
+    // public function testArticleList()
+    // {
+    //     $response = $this->get('/article');
 
-        $response->assertStatus(200);
-    }
+    //     $response->assertStatus(200);
+    // }
 }

@@ -65,3 +65,7 @@ Route::get('/admin/clothes-cross', 'admin\ClothesCrossController@index')
   ->middleware('auth');
 Route::get('/admin/recommend', 'admin\RecommendController@index')
   ->middleware('auth');
+
+//シャーディングテスト
+Route::get('/shard', 'ShardtestController@index')
+->middleware('auth');
