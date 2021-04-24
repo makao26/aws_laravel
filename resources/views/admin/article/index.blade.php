@@ -29,7 +29,6 @@
 </div>
 <hr>
 <div>
-
   <table>
     <tr><th>ID</th><th>タイトル</th><th>カテゴリー</th><th>作成日</th><th>更新日</th><th>詳細</th></tr>
     @if(isset($articles))
