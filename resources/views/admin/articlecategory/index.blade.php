@@ -10,9 +10,9 @@
         <tr>
           <td>{{$article_category->id}}</td>
           <td>{{$article_category->category_id}}</td>
-          <td>{{$article->category}}</td>
-          <td>{{$article->created_at}}</td>
-          <td>{{$article->updated_at}}</td>
+          <td>{{$article_category->category}}</td>
+          <td>{{$article_category->created_at}}</td>
+          <td>{{$article_category->updated_at}}</td>
           <td><a href='/admin/articlecategory/detail?id={{$article->id}}'>詳細</td>
         </tr>
         @endforeach

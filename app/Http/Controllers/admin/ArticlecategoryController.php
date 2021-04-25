@@ -7,14 +7,38 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use App\Models\ArticleCategory;
+use App\Http\Requests\ArticlecategoryRequest;
 
 class ArticlecategoryController extends Controller
 {
 
+  /**
+   * 一覧表示
+   */
   public function index(){
     $article_categories = ArticleCategory::alllist();
     return view('admin.articlecategory.index',['article_categories'=>$article_categories]);
   }
+
+  /**
+   * データ追加
+   */
+  public function add()
+  {
+    return view('admin.articlecategory.add');
+  }
+  public function create(ArticlecategoryRequest $request)
+  {
+    $article_category = new ArticleCategory();
+    $this->savedata($request,$article_category);
+    return redirect('/admin/articlecategory/add');
+  }
+  private function savedata($request,$article_category){
+    $article_category->category = $request->category;
+    $article_category->save();
+  }
+
+  
 
   // private function getSearchArticleParam(Request $request)
   // {
