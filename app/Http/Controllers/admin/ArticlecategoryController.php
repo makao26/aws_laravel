@@ -38,7 +38,7 @@ class ArticlecategoryController extends Controller
     $article_category->save();
   }
 
-  
+
 
   // private function getSearchArticleParam(Request $request)
   // {
