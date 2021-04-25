@@ -17,8 +17,9 @@ class ShardtestController extends Controller
         // $shard_test->setConnection('shard'.(Auth::user()->id % 2));
         // $val = $shard_test->where('user_id',Auth::user()->id)->first();
 
-        ShardSelector::setShard(ShardSelector::getShardName(Auth::user()->id));
-        $shard_test = new Shardtest();
+        // ShardSelector::setShard(ShardSelector::getShardName(Auth::user()->id));
+        // $shard_test = new Shardtest();
+        $shard_test = new Shardtest(Auth::user()->id);
         $val =  $shard_test->where('user_id',Auth::user()->id)->first();
         return view('shard/index',['val'=>$val]);
     }

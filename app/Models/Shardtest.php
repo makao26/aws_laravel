@@ -2,18 +2,18 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use App\Facades\ShardSelector;
+// use Illuminate\Database\Eloquent\Model;
+// use App\Facades\ShardSelector;
 
-class Shardtest extends Model
+class Shardtest extends UModel
 {
     protected $table = 'shard_test';
 
-    public function __construct(array $attaribute = []) {
-        parent::__construct($attaribute);
+    // public function __construct(array $attaribute = []) {
+    //     parent::__construct($attaribute);
 
-        $this->connection = ShardSelector::getShard();
-    }
+    //     $this->connection = ShardSelector::getShard();
+    // }
 
 
 }
