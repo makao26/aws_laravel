@@ -6,10 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class ArticleCategory extends Model
 {
-  protected $table = 'article_categories';
+  protected $table = 'articlecategories';
 
   public static function alllist(){
-    $article_categories = self::orderBy('id', 'asc')->all();
+    $article_categories = self::orderBy('id', 'asc')->get();
     return $article_categories;
   }
 

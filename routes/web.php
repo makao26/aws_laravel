@@ -65,9 +65,14 @@ Route::get('/admin/clothes-cross', 'admin\ClothesCrossController@index')
   ->middleware('auth');
 Route::get('/admin/recommend', 'admin\RecommendController@index')
   ->middleware('auth');
+
+// 記事カテゴリー対応
 Route::get('/admin/articlecategory', 'admin\ArticlecategoryController@index')
   ->middleware('auth');
-
+Route::get('/admin/articlecategory/add', 'admin\ArticlecategoryController@add')
+  ->middleware('auth');
+Route::post('/admin/articlecategory/add', 'admin\ArticlecategoryController@create')
+  ->middleware('auth');
 //シャーディングテスト
 Route::get('/shard', 'ShardtestController@index')
 ->middleware('auth');
