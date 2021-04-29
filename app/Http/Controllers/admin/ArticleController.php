@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Article;
+use App\Http\Requests\ArticleRequest;
 // use Storage;
 
 
@@ -66,6 +67,11 @@ class ArticleController extends Controller
 
 
   // /*一覧表示*/
+  public function _index(ArticleRequest $request)
+  {
+    
+  }
+
   public function index(Request $request)
   {
     $inputparams = $request->session()->get('inputparams');
