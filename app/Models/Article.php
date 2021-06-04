@@ -4,14 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Article extends Model
+class Article extends UModel
 {
   protected $table = 'articles';
 
-  public static function alllist(){
-    $articles = Article::all();
-    return $articles;
-  }
+  // 全件取得はUMOdelに定義済
 
   public static function searchlist($inputparams){
     $query = self::query();

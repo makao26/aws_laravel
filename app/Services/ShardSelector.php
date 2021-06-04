@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Log;
 
 class ShardSelector
 {
+    /** 現在の水平分割数 */
+    const db_num = 2;
+
     /** 現在使用しているシャード */
     private $shard;
 
@@ -28,6 +31,15 @@ class ShardSelector
      * @return string DB設定の名前
      */
     public function getShardName($userId) {
-        return 'shard'.($userId % 2);
+        return 'shard'.($userId % self::db_num);
+    }
+
+    public function getAllShards(){
+        $shard_id_list = [];
+        for($i=0;$i<self::db_num; $i++){
+            $shard_id_list[] = $i;
+        }
+
+        return $shard_id_list;
     }
 }

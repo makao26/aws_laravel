@@ -76,3 +76,5 @@ Route::post('/admin/articlecategory/add', 'admin\ArticlecategoryController@creat
 //シャーディングテスト
 Route::get('/shard', 'ShardtestController@index')
 ->middleware('auth');
+Route::get('/shard/list', 'ShardtestController@list')
+->middleware('auth');

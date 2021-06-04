@@ -67,10 +67,12 @@ class ArticleController extends Controller
 
 
   // /*一覧表示*/
-  public function _index(ArticleRequest $request)
+  public function listview(Request $request)
   {
     
   }
+
+
 
   public function index(Request $request)
   {
